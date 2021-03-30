@@ -1,0 +1,23 @@
+extends ../layouts/master.pug
+
+block title
+  title About
+
+block basicSeo
+  meta(name='description' content='About page')
+  meta(name='keywords', content='about, page')
+  meta(name='author' content='')
+
+block manifestBrowserconfigFiles
+  link(rel='manifest', href='../manifest.json')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+  // Menu
+  +menu('blog')
+
+  //- Desktop page
+  section.about
+    h1.about__title # About page
+

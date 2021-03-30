@@ -1,0 +1,128 @@
+extends ./layouts/master.pug
+
+block title
+  title My Page - Home
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+  // Menu
+  +menu('home')
+
+  //- Desktop page
+  section.main
+    .main--wrapper
+      .main--container.container
+        h1.main__title СТО GAGARINAUTO
+        h2.main__subtitle Ремонт и техническое обслуживание авто
+        form.main__form(method="POST")
+          // Hidden Required Fields
+          input(type='hidden' name='form_subject' value='Главная')
+          // END Hidden Required Fields
+          input.form__input(type="text" id="name-main" name="name" placeholder="Имя")
+          input.form__input.main__phone.phone-input(type='text' id="phone-main" name="phone" placeholder='Телефон')
+          input.form__submit(type='submit' id="submit-main" value='Записаться')
+  section.services
+    .services__container.container
+      .services__title
+        h2 Услуги
+      ul.services__list
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/lighting.svg' alt='')
+            h3.item__name Проверка и замена аккумуляторов
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/brake-disk.svg' alt='')
+            h3.item__name Обслуживание и ремонт тормозных систем
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/manual-transmission.svg' alt='')
+            h3.item__name Ремонт трансмиссий
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/solutions.svg' alt='')
+            h3.item__name Запчасти из Америки
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/tire.svg' alt='')
+            h3.item__name Шиномонтаж
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/spray-gun.svg' alt='')
+            h3.item__name Покраска авто
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/gasoline.svg' alt='')
+            h3.item__name Замена масла
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/diagnostic.svg' alt='')
+            h3.item__name Диагностика авто
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/delivery.svg' alt='')
+            h3.item__name Пригонки Авто из Америки
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/details.svg' alt='')
+            h3.item__name Детейлинг
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/wipe.svg' alt='')
+            h3.item__name Химчистка
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/setting.svg' alt='')
+            h3.item__name Рихтовка
+        a(href='/')
+          .services__item
+            img.item__logo(src='/assets/images/icons/car.svg' alt='')
+            h3.item__name Помощь при покупке авто
+  section.consultation
+    .consultation--container.container
+      .consultation--text
+        .consultation--title Бесплатная консультация
+        .consultation--subtitle Запишитесь онлайн в один клик и наш менеджер свяжется с вами.
+        .consultation--form
+          input.form__input.main__phone.phone-input(type='text' id="phone-main" name="phone" placeholder='Телефон')
+          input.form__submit(type='submit' id="submit-main" value='Записаться')
+      .consultation--img
+        img(src="/assets/images/icons/consultation.jpg", alt="")
+  section.advantages
+    .advantages__container.container
+      .advantages__title
+        h2 Наши примущества
+      ul.advantages__list
+        li
+          img(src='/assets/images/icons/priority.svg' alt='')
+          span Приоритет на качество и безопасность
+          p Каждого нашего клиента ждет индивидуальный подход независимо от сложности его проблемы. К услугам автовладельцев Киеве опытные мастера, прошедшие обучение в соответствие со стандартами производителей автомобилей.
+        li
+          img(src='/assets/images/icons/car-repair.svg' alt='')
+          span Комплексный ремонт авто
+          p Наш автосервис в Киеве предоставляет услуги автосервиса любой сложности и предлагает широкий спектр работ по техническому обслуживанию японских, корейских и европейских автомобилей.
+        li
+          img(src='/assets/images/icons/deadline.svg' alt='')
+          span Соблюдение всех сроков
+          p Мы ценим время наших клиентов, поэтому стараемся выполнить работу чётко в срок и заранее предупреждаем клиентов об объеме и времени работы. Это включает в себя доставку необходимых деталей, работу, техническое обслуживание после ремонта и сдачу авто клиенту
+  section.map
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5072.564337973042!2d30.5881422!3d50.5289219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d11ab270f16b%3A0xa7552ac365f749d9!2z0KHQotCeIEdBR0FSSU5BVVRP!5e0!3m2!1sru!2sua!4v1617117823202!5m2!1sru!2sua" width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  section.connection
+    .connection--container.container
+      .connection--content
+        .connection--title Будем на связи!
+        .content--item
+          span Наш адрес
+          a(href="https://www.google.com.ua/maps/place/%D0%A1%D0%A2%D0%9E+GAGARINAUTO/@50.5289219,30.5881422,16z/data=!4m12!1m6!3m5!1s0x40d4d11ab270f16b:0xa7552ac365f749d9!2z0KHQotCeIEdBR0FSSU5BVVRP!8m2!3d50.5297313!4d30.5884455!3m4!1s0x40d4d11ab270f16b:0xa7552ac365f749d9!8m2!3d50.5297313!4d30.5884455?hl=ru") вулиця Тодося Осьмачки, 61-А, Київ, 02000
+        .content--item
+          span Наш телефон
+          a(href="tel:0632883815") 063 288 38 15
+      .connection--form
+        form
+          input.form__input(type="text" id="name-main" name="name" placeholder="Имя")
+          input.form__input.main__phone.phone-input(type='text' id="phone-main" name="phone" placeholder='Телефон')
+          input.form__submit(type='submit' id="submit-main" value='Записаться')

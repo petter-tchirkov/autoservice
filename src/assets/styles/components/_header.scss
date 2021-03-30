@@ -1,0 +1,89 @@
+/* src/assets/styles/components/_header.scss  */
+.header{
+  position: fixed;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.5s;
+  *{
+    color: #fff;
+    font-weight: 900;
+  }
+  &--container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &--nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    .menu--item{
+      a{
+        transition: 0.3s;
+        &:hover{
+          color: #D72700;
+        }
+      }
+    }
+  }
+  @include phones{
+    display: none;
+  }
+}
+
+.active {
+  background-color: rgba(34,34,34,0.8);
+}
+
+.header-mobile{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &--container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  &--logo{
+    a{
+      font-weight: 900;
+      color: #000;
+    }
+  }
+  &--seen{
+    display: flex;
+    justify-content: space-between;
+  }
+  &--burger{
+    span{
+      height: 4px;
+      margin-bottom: 3px;
+      display: block;
+      background-color: #D72700;
+      width: 30px;
+    }
+  }
+  &--nav{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    padding-left: 15px;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+    z-index: 0;
+    .menu--item{
+      font-weight: 900;
+      margin-bottom: 20px;
+      a{
+        color: #000;
+      }
+    }
+  }
+}
+@media (min-width: 768px){
+  .header-mobile{
+    display: none;
+  }
+}

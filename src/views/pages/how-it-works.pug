@@ -1,0 +1,22 @@
+extends ../layouts/master.pug
+
+block title
+  title How it Works
+
+block basicSeo
+  meta(name='description' content='About page')
+  meta(name='keywords', content='about, page')
+  meta(name='author' content='')
+
+block manifestBrowserconfigFiles
+  link(rel='manifest', href='../manifest.json')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+  // Menu
+  +menu('blog')
+
+  //- Desktop page
+  section.how-it-works
+    h1.how-it-works__title # How it works page

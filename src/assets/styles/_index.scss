@@ -1,0 +1,382 @@
+/* src/assets/styles/pages/_index.scss  */
+
+
+.main{
+  padding-top: 300px;
+  padding-bottom: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('/assets/images/main-bg.jpg');
+  background-size: cover;
+  @include phones{
+    padding-top: 150px;
+    // padding-bottom: 150px;
+    background-position: center center;
+  }
+  &__wrapper{
+    // background-color: #000;
+    // opacity: 0.7;
+    padding-top: 92px;
+    padding-bottom: 193px;
+  }
+  *{
+    color: #fff;
+  }
+  &__title{
+    font-weight: bold;
+    @include adaptive-font(102,32);
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  &__subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  &__form{
+    display: grid;
+    grid-template-columns: repeat(3, 275px);
+    grid-column-gap: 20px;
+    justify-content: center;
+    height: 60px;
+    @include tablets{
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 20px;
+    }
+    @include phones{
+      grid-template-columns: 1fr;
+    }
+    .form__select,.form__input{
+      background-color: #fff;
+      position: relative;
+      z-index: 10;
+      border-radius: 10px;
+      box-shadow: none;
+      border: none;
+      padding-left: 45px;
+      font-weight: 500;
+      &::placeholder{
+        font-weight: 500;
+      }
+      &:focus{
+      }
+      @include tablets{
+        height: 60px;
+        background-color: #fff;
+      }
+    }
+    .form__submit{
+      color: #000;
+      border-radius: 10px;
+      border: transparent;
+      transition: 0.3s;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover{
+        background-color: #D72700;
+        color: #fff;
+      }
+      @include tablets{
+        grid-column: 1 / 3;
+        height: 60px;
+      }
+      @include phones{
+        background-color: #fff;
+        grid-column: 1;
+      }
+    }
+  }
+}
+
+.services{
+  padding-top: 65px;
+  padding-bottom: 80px;
+  &__title{
+    display: grid;
+    grid-column-gap: 20px;
+    align-items: center;
+    margin-bottom: 60px;
+    hr{
+      border: 1px solid #D72700;
+    }
+    h2{
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 43px;
+    }
+  }
+  a{
+    text-decoration: none;
+    color: gray;
+    &:hover{
+      color: gray;
+    }
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    @include tablets{
+      grid-template-columns: 1fr 1fr;
+    }
+    @include phones{
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item{
+    display: grid;
+    padding: 18px;
+    height: 100%;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 10px;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    transition: 0.3s;
+    align-items: center;
+    img{
+      width: 50px;
+    }
+    &:hover{
+      border: 2px solid #ccc;
+    }
+    h3{
+      color: #000;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    p{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 131%;
+      grid-column: 2;
+      color: gray;
+    }
+  }
+}
+
+.consultation{
+  background-color: #102131;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &--title{
+    font-size: 36px;
+    color: #D72700;
+    margin-bottom: 20px;
+  }
+  &--subtitle{
+    font-size: 20px;
+    color: #fff;
+    max-width: 365px;
+    margin-bottom: 50px;
+  }
+  &--container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+    @include phones{
+      grid-template-columns: 1fr;
+    }
+  }
+  &--img{
+    flex: 1 1 33.333%;
+    @include phones{
+      display: none;
+    }
+    img{
+      max-width: 100%;
+      border-radius: 100%;
+    }
+  }
+  &--text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &--form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    @include phones{
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+    }
+  }
+  .form__select,.form__input{
+    background-color: #000;
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    padding-left: 45px;
+    height: 60px;
+    font-weight: 500;
+    &::placeholder{
+
+      font-weight: 500;
+    }
+    &:focus{
+
+    }
+  }
+  .form__submit{
+    color: #000;
+    border-radius: 10px;
+    border: transparent;
+    transition: 0.3s;
+    font-weight: 700;
+    height: 60px;
+    cursor: pointer;
+    &:hover{
+      background-color: #D72700;
+      color: #fff;
+    }
+  }
+}
+
+.advantages{
+  padding-top: 65px;
+  padding-bottom: 80px;
+  background-color: #666;
+  &__title{
+    display: grid;
+    grid-column-gap: 20px;
+    align-items: center;
+    margin-bottom: 60px;
+    hr{
+      border: 1px solid #FF2F00;
+    }
+    h2{
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 43px;
+    }
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    @include tablets{
+      grid-template-columns: 1fr;
+    }
+    li{
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000;
+      padding-right: 80px;
+      @include tablets{
+        padding-right: 0;
+      }
+      img{
+        width: 50px;
+        margin-bottom: 20px;
+      }
+      span{
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      p{
+        text-align: center;
+      }
+    }
+  }
+}
+
+.map{
+  overflow: hidden;
+  position:relative;
+  padding-bottom: 40%;
+  @include phones{
+    padding-bottom: 80%;
+  }
+  iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+}
+
+.connection{
+  background-color: #102131;
+  padding: 50px 0;
+  &--container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @include phones{
+      grid-template-columns: 1fr;
+    }
+  }
+  *{
+    color: #fff;
+  }
+  &--title{
+    font-size: 37px;
+    margin-bottom: 50px;
+    color: #D72700;
+  }
+  &--content{
+    .content--item{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      span{
+        font-size: 24px;
+      }
+      @include phones{
+        text-align: center;
+      }
+    }
+  }
+  &--form{
+    form{
+      display: grid;
+      align-items: stretch;
+      grid-row-gap: 10px;
+      input{
+        height: 40px;
+      }
+      .form__select,.form__input{
+        background-color: #000;
+        position: relative;
+        z-index: 10;
+        border-radius: 10px;
+        box-shadow: none;
+        border: none;
+        padding-left: 45px;
+        height: 60px;
+        font-weight: 500;
+        &::placeholder{
+    
+          font-weight: 500;
+        }
+        &:focus{
+    
+        }
+      }
+      .form__submit{
+        color: #000;
+        border-radius: 10px;
+        border: transparent;
+        transition: 0.3s;
+        font-weight: 700;
+        height: 60px;
+        cursor: pointer;
+        &:hover{
+          background-color: #D72700;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
