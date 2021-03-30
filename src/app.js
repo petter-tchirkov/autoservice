@@ -60,3 +60,107 @@ var swiper = new Swiper('.swiper-container', {
     },
   }
 });
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelector('.main__form').addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    let phone = document.querySelector(".phone-input").value;
+    let name = document.querySelector(".name-input").value;
+
+
+    phone = phone.replace(/[\s\-\(\)]/g, "");
+
+    if (phone.match(/^((\+?3)?8)?0\d{9}$/) != null) {
+        sendEmail(phone,name);
+      } else {
+        alert("Пожалуйста, введите корректный номер телефона");
+      }
+    
+    const url = window.location.href;
+    function sendEmail(phone, name) {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "gagarinauto24@gmail.com",
+        Password: "fdqdgivfettyzlva",
+        To: "gagarinauto24@gmail.com",
+        From: "gagarinauto24@gmail.com",
+        Subject: `Новый заказ: ${name}`,
+        Body: `
+              Имя: ${name}<br/>
+              Телефон: ${phone}<br/>
+              `,
+      }).then((message) =>
+        window.location = `${url}/contact`
+      );
+    }
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelector('.consultation--form').addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    let phone = document.querySelector(".phone-input").value;
+    let name = document.querySelector(".name-input").value;
+
+
+    phone = phone.replace(/[\s\-\(\)]/g, "");
+
+    sendEmail(phone,name);
+    
+    const url = window.location.href;
+    function sendEmail(phone, name) {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "gagarinauto24@gmail.com",
+        Password: "fdqdgivfettyzlva",
+        To: "gagarinauto24@gmail.com",
+        From: "gagarinauto24@gmail.com",
+        Subject: `Новый заказ: ${name}`,
+        Body: `
+              Имя: ${name}<br/>
+              Телефон: ${phone}<br/>
+              `,
+      }).then((message) =>
+        window.location = `${url}/contact`
+      );
+    }
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelector('.connection--form').addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    let phone = document.querySelector(".con-phone").value;
+    let name = document.querySelector(".con-name").value;
+
+
+    phone = phone.replace(/[\s\-\(\)]/g, "");
+
+    if (phone.match(/^((\+?3)?8)?0\d{9}$/) != null) {
+        sendEmail(phone,name);
+      } else {
+        alert("Пожалуйста, введите корректный номер телефона");
+      }
+    
+    const url = window.location.href;
+    function sendEmail(phone, name) {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "gagarinauto24@gmail.com",
+        Password: "fdqdgivfettyzlva",
+        To: "gagarinauto24@gmail.com",
+        From: "gagarinauto24@gmail.com",
+        Subject: `Новый заказ: ${name}`,
+        Body: `
+              Имя: ${name}<br/>
+              Телефон: ${phone}<br/>
+              `,
+      }).then((message) =>
+        window.location = `${url}/contact`
+      );
+    }
+  })
+})
