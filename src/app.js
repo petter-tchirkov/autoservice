@@ -23,10 +23,40 @@ window.onscroll = function(){
 const burger = document.querySelector('.header-mobile--burger');
 const nav = document.querySelector('.header-mobile--nav')
 burger.addEventListener('click', () =>{
-  if(nav.style.top !== '30px'){
-    nav.style.top = '30px';
+  if(nav.style.top !== '45px'){
+    nav.style.top = '45px';
   } else{
-    nav.style.top = '-100px';
+    nav.style.top = '-1000px';
   }
   
 })
+
+var swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  loop: true,
+  direction: 'horizontal',
+  slidesPerView: 3,
+  spaceBetween: 30,
+  breakpoints: {
+    320:{
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+      pagination: {}
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  }
+});

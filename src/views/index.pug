@@ -1,7 +1,7 @@
 extends ./layouts/master.pug
 
 block title
-  title My Page - Home
+  title GAGARINAUTO
 
 block manifestBrowserconfigFiles
   link(href='../manifest.json', rel='manifest')
@@ -16,7 +16,7 @@ block content
   section.main
     .main--wrapper
       .main--container.container
-        h1.main__title СТО GAGARINAUTO
+        h1.main__title Автосервис GAGARINAUTO
         h2.main__subtitle Ремонт и техническое обслуживание авто
         form.main__form(method="POST")
           // Hidden Required Fields
@@ -24,8 +24,8 @@ block content
           // END Hidden Required Fields
           input.form__input(type="text" id="name-main" name="name" placeholder="Имя")
           input.form__input.main__phone.phone-input(type='text' id="phone-main" name="phone" placeholder='Телефон')
-          input.form__submit(type='submit' id="submit-main" value='Записаться')
-  section.services
+          input.form__submit(type='submit' id="submit-main" value='Записаться на СТО')
+  section#services.services
     .services__container.container
       .services__title
         h2 Услуги
@@ -65,7 +65,7 @@ block content
         a(href='/')
           .services__item
             img.item__logo(src='/assets/images/icons/delivery.svg' alt='')
-            h3.item__name Пригонки Авто из Америки
+            h3.item__name Пригон Авто из Америки
         a(href='/')
           .services__item
             img.item__logo(src='/assets/images/icons/details.svg' alt='')
@@ -82,7 +82,101 @@ block content
           .services__item
             img.item__logo(src='/assets/images/icons/car.svg' alt='')
             h3.item__name Помощь при покупке авто
-  section.consultation
+  section#reviews.reviews
+    .reviews--container.container
+      .reviews--title 
+        h2 Отзывы наших клиентов:
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide.slide
+            .slide--header
+              .logo
+              .text
+                .name Владислав Билоус
+                .maps Отзыв на Google Maps
+              .stars
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+            .slide--content
+              p Отличный сервис! Делал плановое ТО и менял масло в коробке передач (уже проехал 10к+). Качество, сроки и цена на высшем уровне. Рекомендую! 👍
+          .swiper-slide.slide
+            .slide--header
+              .logo
+              .text
+                .name Valera Okal
+                .maps Отзыв на Google Maps
+              .stars
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+            .slide--content
+              p Обслуживаю в этом сервисе уже третью машину. Очень доволен. Нормальное человеческое отношение, готовность решить любые нестандартные вопросы. Качество работ на самом высоком уровне при нормальных ценах. В общем, смело рекомендую.
+          .swiper-slide.slide
+            .slide--header
+              .logo
+              .text
+                .name Vladislav Tkachenko
+                .maps Отзыв на Google Maps
+              .stars
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+            .slide--content
+              p Хорошие мастера. Внимательные менеджеры. Всегда держат в курсе процесса ремонта авто, заблаговременно предупреждают. Работу делают качественно и с гарантией. Рекомендую!
+          .swiper-slide.slide
+            .slide--header
+              .logo
+              .text
+                .name Bandit_Play
+                .maps Отзыв на Google Maps
+              .stars
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+            .slide--content
+              p Дружелюбный и очень грамотный персонал с адекватным руководством. Обслуживаю свой автомобиль здесь на постоянной основе 👍
+          .swiper-slide.slide
+            .slide--header
+              .logo
+              .text
+                .name Кирилл Мариенко
+                .maps Отзыв на Google Maps
+              .stars
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+            .slide--content
+              p Отличный сервис – не пожалел, что выбрал именно это СТО. Персонал работает профессионально и на совесть, стараются для каждого 👌
+          .swiper-slide.slide
+            .slide--header
+              .logo
+              .text
+                .name Vlad K.
+                .maps Отзыв на Google Maps
+              .stars
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+                img(src="/assets/images/icons/star.svg", alt="")
+            .slide--content
+              p Быстро, без сложностей сделали тех обслуживание моей машины,  запчасти не дорого.
+        // Add Arrows
+        .swiper-button-next
+        .swiper-button-prev
+        .swiper-pagination
+  section#consultation.consultation
     .consultation--container.container
       .consultation--text
         .consultation--title Бесплатная консультация
@@ -91,8 +185,8 @@ block content
           input.form__input.main__phone.phone-input(type='text' id="phone-main" name="phone" placeholder='Телефон')
           input.form__submit(type='submit' id="submit-main" value='Записаться')
       .consultation--img
-        img(src="/assets/images/icons/consultation.jpg", alt="")
-  section.advantages
+        img(src="/assets/images/consultation.jpg", alt="")
+  section#advantages.advantages
     .advantages__container.container
       .advantages__title
         h2 Наши примущества
