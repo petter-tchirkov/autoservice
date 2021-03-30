@@ -16,11 +16,19 @@
     justify-content: space-between;
   }
   &--nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
+    display: flex;
     .menu--item{
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
       a{
+        display: flex;
+        align-items: center;
         transition: 0.3s;
         &:hover{
           color: #D72700;
@@ -56,6 +64,9 @@
     justify-content: space-between;
   }
   &--burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     span{
       height: 4px;
       margin-bottom: 3px;
@@ -76,8 +87,14 @@
     .menu--item{
       font-weight: 900;
       margin-bottom: 20px;
+      display: flex;
+      align-items: center;
       a{
         color: #000;
+      }
+      img{
+        width: 15px;
+        margin-right: 5px;
       }
     }
   }
